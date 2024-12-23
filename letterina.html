@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letterina</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdf3e6; /* Colore simile alla carta */
+      font-family: 'Georgia', serif;
+      color: #5a4631;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .letter {
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 20px;
+      line-height: 1.8;
+      position: relative;
+    }
+    .letter:before, .letter:after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background: #d4a373;
+      top: 20px;
+      left: 10%;
+    }
+    .letter:after {
+      top: auto;
+      bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #8b5a2b;
+    }
+    p {
+      text-indent: 30px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"], input[type="email"], textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .radio-group input[type="radio"] {
+      transform: scale(1.5);
+      margin-right: 10px;
+    }
+    .radio-group label {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    button {
+      background-color: #d4a373;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c48d52;
+    }
+  </style>
+</head>
+<body>
+  <div class="letter">
+    <h1>Per Carlottina, da Fastweb</h1>
+    <p>
+      Carlottina, lo so che con i siti sono ripetitivo ma mi piace farli perché rimangono come ricordo. Vorrei dirti un paio di cose. Io questo anno scolastico l'ho cominciato un pochettino male emotivamente per il fatto della mia amica, ma poi ho conosciuto due fanciulle. Una l'ho conosciuta dopo un po' ma quella che ho conosciuto prima, chiamata Carlottina, mi ha fatto capire che c'è di meglio della mia amica nel mondo, mi ha reso di nuovo felice.
+      Carlottina io ti voglio tantissimo bene, e mi rendo conto di aver superato il limite. Non ti scrivo così tanto per, ti sto dicendo cose che penso davvero e come sempre ti scrivo con il cuoricino in mano. Ti chiedo scusa per tutte quelle volte (e purtroppo so che sono tante) in cui non ti ho fatta sentire al massimo, e sono consapevole di averti detto tante volte che sarei cambiato senza poi farlo.
+      Tu sei una persona speciale, aiuti le persone intorno a te, tieni a loro, ed hai una pazienza infinita, soprattutto con me.
+      Una volta mi avevi detto che il regalo più bello che potessi farti è quello di cambiare ed essere migliore, ed io come faccio a dire di no alla mia Carlottina???
+      È Natale, e siamo tutti più buoni e inoltre è periodo di regali, ed io vorrei farti questo regalo se per te va bene.
+      Se c'è una promessa che non ho mai infranto è quella con il mignolino, dunque:
+    </p>
+    <i>Io, Francesco Privitera, detto Fastweb, giuro solennemente con il mignolino che sarò l'amico che Carlotta La Spina, detta Carlottina, merita. Le darò tutto l'affetto che merita e mi impegnerò a farla stare bene, perché Carlottina, io ti voglio bene.</i>
+	<br>
+	<p>Carlottina, io ti voglio tantissimo bene e non voglio allontanarmi da te, ti va di riprovarci? Ovviamente con il giuramento di prima in vigore.</p>
+	<br>
+	<p>P.S. Ho messo anche una sezione dove puoi scrivere nel caso volessi scrivermi qualcosina :)</p>
+    <form action="https://formspree.io/f/xovvqzvo" method="POST">
+    
+      <div class="radio-group">
+        <label><input type="radio" name="response" value="si" required> Sì</label>
+        <label><input type="radio" name="response" value="no"> No</label>
+      </div>
+      <textarea name="message" placeholder="SCRIVI QUALCOSA DI CARINO CARLOTTINAAA" rows="5" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </div>
+</body>
+</html>
