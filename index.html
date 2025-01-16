@@ -1,15 +1,60 @@
- <!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlottina%Fastweb</title>
+    <title>Carlottina&Fastweb</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Stile per il popup */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-Navbar 
+<!-- Overlay per il popup -->
+<div class="popup-overlay" id="popupOverlay"></div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <h5>CARLOTTINA&FASTWEB ARE BACK!</h5>
+    <p>Sono contento che stiamo riprovando ad essere amici come un tempo, magari diventeremo ancora meglio di un tempo, magari diventeremo migliori amici chi lo sa. Io penso che la chiave sia una: quando abbiamo un problema ne parliamo e basta, senza lasciare il visualizzato. E soprattutto, spero che riuscirai ad aprirti affettivamente e confidenzialmente con me. Ti voglio un mondo di bene. </p>
+    <form action="https://formspree.io/f/xovvqzvo" method="POST">
+        <div class="form-group">
+       
+            <textarea name="message" id="message" class="form-control" rows="5" placeholder="Scrivi qualcosina di carino per iniziare al meglio" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Invia</button>
+        <br>
+        <br>
+    </form>
+    
+    <button id="closePopup" class="btn btn-primary">Chiudi</button>
+</div>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">Per Carlottina</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,11 +67,9 @@ Navbar
             <li class="nav-item"><a class="nav-link" href="arabic.html">Arabo</a></li>
             <li class="nav-item"><a class="nav-link" href="dance.html">Danza Latino Americana</a></li>
             <li class="nav-item"><a class="nav-link" href="baking.html">Fare Dolci</a></li>
-            <li class="nav-item"><a class="nav-link text-danger" href="apology.html">Scuse</a></li>
         </ul>
     </div>
 </nav>
-
 
 <div class="container text-center my-5">
     <h1>Ciao Carlottinaaa</h1>
@@ -44,7 +87,7 @@ Navbar
                 </div>
             </div>
         </div>
-
+    
         <div class="col-md-4 my-3">
             <div class="card">
                 <img src="https://www.lightquiz.com/images/capitale-germania-berlino-bandiera-porta-brandeburgo-620.webp" class="card-img-top" alt="Tedesco">
@@ -55,7 +98,7 @@ Navbar
                 </div>
             </div>
         </div>
-
+    
         <div class="col-md-4 my-3">
             <div class="card">
                 <img src="https://media.istockphoto.com/id/1293325404/it/foto/edifici-punti-di-riferimento.jpg?s=612x612&w=0&k=20&c=u7HdE53JFwzRF1aBfPSdUvkp27Xn9AgCiA8ZpWNk6u0=" class="card-img-top" alt="Arabo">
@@ -66,7 +109,7 @@ Navbar
                 </div>
             </div>
         </div>
-
+    
         <div class="col-md-4 my-3">
             <div class="card">
                 <img src="https://www.mistermabo.com/wp-content/uploads/2019/05/61357758_2708989929117708_3518526256440147968_o.jpg" class="card-img-top" alt="Danza Latino Americana">
@@ -77,7 +120,7 @@ Navbar
                 </div>
             </div>
         </div>
-
+    
                <div class="col-md-4 my-3">
             <div class="card">
                 <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2023/08/dolci-italiani-ricette.jpg" class="card-img-top" alt="Fare Dolci">
@@ -88,62 +131,46 @@ Navbar
                 </div>
             </div>
         </div>
-
-
-        <div class="col-md-4 my-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Scuse</h5>
-                    <p class="card-text">Mi dispiace per tutto, spero di potermi far perdonare.</p>
-                    <a href="apology.html" class="btn btn-danger">Leggi</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 my-3">
-            <div class="card">
-                <img src="https://www.4graph.it/blog/wp-content/uploads/2022/05/Busta-lettera.png" class="card-img-top" alt="Fare Dolci">
-                <div class="card-body">
-                    <h5 class="card-title">CLICCA QUI</h5>
-                    <a href="letterina.html" class="btn btn-primary">Clicca</a>
-                </div>
-            </div>
+    
+    
+    
         </div>
     </div>
+    </div>
 </div>
-
 
 <footer class="bg-light text-center py-3 mt-5">
     <p class="mb-0">Realizzato dal tuo Fastweb &copy;</p>
 </footer>
 
+<script>
+    // Mostra il popup quando la pagina viene caricata
+    window.onload = () => {
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('popupOverlay');
+        const closeButton = document.getElementById('closePopup');
+
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    };
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html> -->
-
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <p>Ei carlottina, questa letterina sarà più bella delle altre perchè non te la scrivo per dirti addio o per qualcosa, te la scrivo e basta. Però fammi una promessa, non leggerla nella tua mente con tono arrabbiato leggila con tono felice perché sono felice mentre la scrivo. Io quando ti ho conosciuta ero il ragazzo più felice del mondo perché ho conosciuto carlottina la ragazza più simpatica e genuina dell’universo. Era bellissimo essere tuo amico perché tu eri praticamente perfetta, mi aggiornavi su quello che facevi, ed una volta (best momento 2024) mi hai mandato un video a casissimo dove mi dicevi perché mi volevi bene. Senza contare tutte le volte che me lo dicevi era bellissimo. Poi sono successe tutte quelle cose che sai, e mi prendo le mie colpe, abbiamo discusso ecc. Poi però io ho dimenticato tutto, perché ti voglio tanto tanto bene e sei la mia carlottina non volevo rimanere ammazzato con te. Quindi mi sono impegnato a farti stare bene ma stavolta quella ad essere cambiata eri tu. Eri freddissima ed io non sapevo come comportarmi. Non mi cercavi letteralmente mai e quando te l’ho fatto notare mi hai detto che ti sto addosso (una delle frasi che mi fanno più male). Ti ho detto che sono affettuoso e volevo esserlo anche con te e mi hai detto sì ma non troppo; ho provato a lasciare perdere tutte queste cose e tu mi hai detto che volevi allontanarti, insomma non volevi farla funzionare. Non so se ti manderó questa lettera probabilmente la metterò nel sito aspettando il giorno in cui tu la legga. Io non voglio chiederti di ricominciare perché se le tue intenzioni sono queste non cambiano facilmente. Tutto ciò che vorrei sarebbe ritornare a quei giorni, quelli in cui ci volevamo bene, quelli in cui stavamo in chiamata la sera, quelli in cui ci dicevamo a caso “ti voglio bene perché…”. Comunque mi vanto per essere un ragazzo estremamente realista e dunque so che forse quei giorni non torneranno, ma sappi che io ti voglio un bene che, veramente, penso nessuno.
-            Mi fa male vedere che agli altri scrivi e a me no, mi fa male vedere che quando mi scrivi, lo fai in modo diverso da come lo fai agli altri, mi fa male vedere che chiami sempre gli altri e a me mai. Mi fa male vedere che quando provo a chiarire, mi dici che dobbiamo allontanarci, e in fine mi fa male vedere che il bel rapporto che avevamo è stato distrutto mentre con gli altri va tutto benissimo. Non credo ti manderò mai questa cosa perché finirebbe in un altro litigio, forse me la terrò e basta. Nel caso la leggessi: Non avrebbe senso provare a ricominciare se le intenzioni sono quelle anche se io sarei stato disposto a rifarlo.
-            Io non so perché tu stia facendo così, anche perché io mi sto impegnando. Io sono stanco di dover avere questo rapporto con te, gli amici si trattano bene sennò non si è amici. Io ho chiesto scusa per tutte le volte che non ti ho trattata bene e in oltre, dato che so che le scuse non bastano, ho anche rimediato con i fatti, ma con te sembra non esserci modo. 
-            Carlottina so che da questa lettera potrebbe sembrare che io non ti voglia bene, ma non è così, io ti voglio bene, sto solo facendo un resoconto di tutte le cose che hai fatto che mi hanno offeso e tutte le cose che hai fatto che mi hanno fatto capire che sei speciale. Io penso sempre una cosa, la voglia di essere amici di qualcuno non è per sempre, prima o poi finisce. Se la cosa continua a non funzionare prima o poi io smetterò di continuare, non continuerò all’infinito, semplicemente non so cosa vuoi tu. Ricapitolando, a me fa stare male vederti fredda, vedere che non mi chiami per chiamare altri, non mi scrivi per scrivere ad altri e quando parliamo sei fredda. Ti ho già scritto prima le cose che fai che mi rendono felice. Lo so che è venuta lunga questa lettera e non so se la leggerai mai, se si, per favore, non rispondere per litigare. Il mio intento non era litigare, era farti capire quello che vivo con te. Se tu fossi stata una ragazza di cui non mi importava non avrei scritto tutto questo. Io sono sempre disposto a ricominciare ma ci devono essere i presupposti, perchè tutte le volte che abbiamo ricominciato è finita allo stesso modo, per colpa mia o per colpa tua.
-            Spero che da questa lettera traspaia quello che provo in modo realistico e non nel senso negativo. Io in ogni caso la metto la casella per rispondere. 
-            Ti voglio bene
-            -Fastweb
-            
-            p.s. per favore non rispondere dicendo cose non belle, già la situazione è pesante così.
-        </p>
-
-            <br>
-            <form action="https://formspree.io/f/xovvqzvo" method="POST">
-                <label for="message">Messaggio:</label><br>
-                <textarea id="message" name="message" placeholder="Scrivi qui il tuo messaggio" rows="5" required></textarea><br><br>
-                
-                <button type="submit">Invia</button>
-    </body>
 </html>
+
+
+
+
+
+
+
+
+
+
